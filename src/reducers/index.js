@@ -1,4 +1,4 @@
-// import {combineReducers} from 'redux';
+import {combineReducers} from 'redux';
 
 import {
     ADD_MOVIES, 
@@ -50,20 +50,23 @@ export function search(state = initialSearchState, action)
     return state;
 }
 
+export default combineReducers({
+    movies,
+    search
+});
 
+// const initialRootReducer = {
+//     movies: initialMoviesState,
+//     search: initialSearchState
+// }
 
-const initialRootReducer = {
-    movies: initialMoviesState,
-    search: initialSearchState
-}
-
-export default function rootReducer(state = initialRootReducer, action)
-{
-    return {
-        movies: movies(state.movies, action),
-        search: search(state.search, action)
-    }
-}
+// export default function rootReducer(state = initialRootReducer, action)
+// {
+//     return {
+//         movies: movies(state.movies, action),
+//         search: search(state.search, action)
+//     }
+// }
 
 
     // if(action.type === ADD_MOVIES) {
