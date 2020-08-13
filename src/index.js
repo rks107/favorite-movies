@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 
@@ -49,6 +49,9 @@ console.log("store:", store);
 // });
 
 // console.log("After State", store.getState());
+
+export const storeContext = createContext();
+console.log('STORECONTEXT', storeContext);
 
 ReactDOM.render(
   <React.StrictMode>
