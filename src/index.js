@@ -40,7 +40,6 @@ const logger = ({dispatch, getState}) => (next) => (action) => {
 
 
 const store = createStore(rootReducer, applyMiddleware(logger, thunk));
-console.log("store:", store);
 // console.log("BEFORE State", store.getState());
 
 // store.dispatch({
@@ -51,7 +50,6 @@ console.log("store:", store);
 // console.log("After State", store.getState());
 
 export const storeContext = createContext();
-console.log('STORECONTEXT', storeContext);
 
 class Provider extends React.Component {
   render(){

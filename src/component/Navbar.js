@@ -31,28 +31,34 @@ class Navbar extends React.Component {
     render(){
       const {result:movie, showSearchResults} = this.props.search;
         return (
-            <div className="nav">
-              <div className="search-container">
-              <input onChange={this.handleChange}/>
-              <button id="search-btn" onClick={this.handleSearch}>Search</button>
+          <div className='nav'>
+            <div className='search-container'>
+              <input onChange={this.handleChange} />
+              <button id='search-btn' onClick={this.handleSearch}>
+                Search
+              </button>
 
-              { showSearchResults && 
-                <div className="search-results">
-                  <div className="search-result">
-                    <img src={movie.poster} alt="search-pic" />
+              {showSearchResults && (
+                <div className='search-results'>
+                  <div className='search-result'>
+                    <img src={movie.Poster} alt='search-pic' />
 
-                    <div className="movie-info">
+                    <div className='movie-info'>
                       <span> {movie.Title}</span>
+                      <div>
+                        <span>Actors:</span>
+                        <span className="actors">{movie.Actors}</span>
+                      </div>
                       <button onClick={() => this.handleAddToMovies(movie)}>
                         Add To Movies
                       </button>
                     </div>
                   </div>
                 </div>
-              }
-              </div>
+              )}
             </div>
-          );
+          </div>
+        );
         }
     }
   

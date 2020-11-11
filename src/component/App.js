@@ -11,14 +11,11 @@ class App extends React.Component {
 
     const {store} = this.props;
     store.subscribe(() => {
-      console.log('UPDATED');
       this.forceUpdate();
     });
     // make api call
     // dispatch action
     store.dispatch(addMovies(data));
-
-    console.log('STATE:', this.props.store.getState());
   }
 
   isMovieFavorite = (movie) => {
@@ -42,7 +39,6 @@ class App extends React.Component {
     
    const {movies, search} = this.props.store.getState();  //{movies:{}, search:{}}
    const {list, favorites, showFavorites} = movies; // {list:[], favorites:[],showFavorites}
-   console.log('RENDER',this.props.store.getState());
    const displayMovies = showFavorites ? favorites:list;
 
    return (
