@@ -49,17 +49,19 @@ Open package.json and add
 ```
 Steps:
 
-1. Install the gh-pages package as a “dev-dependency” of the app
+1. npm run build
 
-2. “homepage”: “http://{Github-username}.github.io/{Github-repo-name}"
+2. Install the gh-pages package as a “dev-dependency” of the app (npm i gh-pages)
 
-3. “scripts”: {
+3. “homepage”: “http://{Github-username}.github.io/{Github-repo-name}"
+
+4. “scripts”: {
       //…
-      “predeploy”: “npm run build”,
-      “deploy”: “gh-pages -d build”
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build"
     }
 
-4. npm run deploy
+5. npm run deploy
   
 ```
 
