@@ -53,9 +53,9 @@ Steps:
 
 2. Install the gh-pages package as a “dev-dependency” of the app (npm i gh-pages)
 
-3. “homepage”: “http://{Github-username}.github.io/{Github-repo-name}"
+3. "homepage": "http://{Github-username}.github.io/{Github-repo-name}"
 
-4. “scripts”: {
+4. "scripts": {
       //…
       "predeploy": "npm run build",
       "deploy": "gh-pages -d build"
